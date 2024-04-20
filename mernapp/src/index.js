@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Navbar1 from './components/Navbar/Navbar';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Login from './screens/Login';
 
 const router = createBrowserRouter([
   {
@@ -15,17 +16,17 @@ const router = createBrowserRouter([
     element:<App/>,
   },
   {
-    path: "/test",
-    element:<Navbar1/>,
+    path: "/mernapp/src/screens/Login.js",
+    element:<Login/>,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <p>Header</p>
+   
     <RouterProvider router={router} />
-    <p>Footer</p>
+    
 
   </React.StrictMode>
 );
